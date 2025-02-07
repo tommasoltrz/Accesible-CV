@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional resume of Tommaso Laterza, Senior Software Engineer with experience in web development and team leadership"
+    />
+    <title>Tommaso Laterza - Senior Software Engineer</title>
+    <style>
+      :root {
+        --primary-text: #37393b;
+        --secondary-text: #73808d;
+        --accent-color: #5cb9c9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.4;
+        color: var(--primary-text);
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        padding: 1.25rem 2rem;
+        display: grid;
+        grid-template-columns: 2.2fr 1fr;
+        gap: 0rem;
+        background-color: white;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .main-content {
+        padding-right: 2rem;
+      }
+
+      .profile-section {
+        margin-bottom: 2.3rem;
+      }
+
+      .profile-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+        color: var(--primary-text);
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--primary-text);
+        margin-bottom: 0.2rem;
+      }
+
+      .intro {
+        color: var(--secondary-text);
+        margin-bottom: 1.1rem;
+        line-height: 1.4;
+        font-size: 0.9rem;
+      }
+
+      .company-name {
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+        font-weight: 400;
+      }
+
+      .company-name:hover,
+      .company-name:focus {
+        text-decoration: underline;
+      }
+
+      .inline-link {
+        color: var(--primary-text);
+        text-decoration: underline;
+      }
+
+      .job-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.1rem;
+        color: var(--primary-text);
+      }
+
+      .date {
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        position: relative;
+        margin-left: 0.5rem;
+      }
+
+      .location {
+        color: var(--secondary-text);
+        font-size: 0.6rem;
+        margin-bottom: 0.15rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: 0.2rem;
+      }
+
+      .job-description {
+        color: var(--primary-text);
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      ul.job-highlights {
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: 1rem;
+      }
+
+      ul.job-highlights li {
+        color: var(--primary-text);
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+        padding-left: 1rem;
+        position: relative;
+        line-height: 1.4;
+      }
+
+      ul.job-highlights li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--secondary-text);
+      }
+
+      .sidebar-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .sidebar-section h3 {
+        color: var(--primary-text);
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .sidebar-section ul {
+        list-style: outside;
+        padding-left: 1rem;
+        margin-left: -0.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .skills-subheading {
+        font-size: 0.9rem;
+        color: var(--secondary-text);
+        letter-spacing: 0.05em;
+        margin-bottom: 0.2rem;
+        margin-top: 0.9rem;
+        font-weight: 600;
+      }
+
+      .contact-links a {
+        display: block;
+        color: var(--secondary-text);
+        text-decoration: none;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+      }
+
+      .contact-links a:hover,
+      .contact-links a:focus {
+        text-decoration: underline;
+      }
+
+      .skills-list,
+      .languages-list,
+      .education-list {
+        list-style: none;
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+      }
+
+      .skills-list li,
+      .languages-list li,
+      .education-list li {
+        margin-bottom: 0.25rem;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          width: 100%;
+          height: auto;
+          padding: 1rem;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .main-content {
+          padding-right: 0;
+        }
+
+        .profile-section {
+          margin: 0 auto;
+        }
+      }
+
+      article:last-child .job-highlights {
+        margin-bottom: 0;
+      }
+      .accent-top-bar {
+        background-color: var(--accent-color);
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .skip-links {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--accent-color);
+        color: white;
+        padding: 8px;
+        z-index: 100;
+        transition: top 0.2s;
+      }
+
+      .skip-links:focus {
+        top: 0;
+      }
+
+      .visually-hidden,
+      .screen-reader-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .contact-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .contact-links li {
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-links a {
+        display: block;
+        color: var(--secondary-text);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .company-heading {
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .company-heading:hover,
+      .company-heading:focus {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="skip-links" aria-label="Skip links">
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+    </nav>
+
+    <div id="main-content" class="main-content" role="main">
+      <header role="banner">
+        <h1 id="page-title">Tommaso Laterza</h1>
+        <h2 id="role-title">Senior Software Engineer</h2>
+        <p class="intro" aria-labelledby="page-title role-title">
+          Experience in scaling web applications and leading development
+          teams.<br />
+          Focus on design systems, user experience, and frontend development.
+        </p>
+      </header>
+
+      <main role="main">
+        <h2 id="experience-heading" class="visually-hidden">
+          Professional Experience
+        </h2>
+        <section aria-labelledby="experience-heading">
+          <article>
+            <h3 id="lastminute-heading">
+              <a
+                href="https://www.lastminute.com"
+                class="company-heading"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LASTMINUTE (opens in new tab)"
+                >LASTMINUTE</a
+              >
+            </h3>
+            <a
+              href="https://www.lastminute.com"
+              class="screen-reader-only"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit LASTMINUTE website (opens in new tab)"
+              >Visit Company Website</a
+            >
+            <div class="job-title">
+              Senior Frontend Engineer
+              <span class="date" aria-current="true">2022 - Present</span>
+            </div>
+            <h4 class="location">Remote</h4>
+
+            <p class="job-description">
+              Core developer for
+              <a
+                href="https://www.weg.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit weg.de website (opens in new tab)"
+                class="inline-link"
+                >weg.de</a
+              >
+              - a major German travel platform that helps thousands of users
+              book their trips daily. I'm leading the modernization of the web
+              platform, implementing company-wide design system standards, and
+              building tools for monitoring performance.
+            </p>
+            <h4 class="visually-hidden">Key Achievements at LASTMINUTE</h4>
+            <ul class="job-highlights" role="list">
+              <li role="listitem">
+                Architecting a new platform from the ground up
+              </li>
+              <li role="listitem">
+                Implementation of the design system used across multiple teams
+              </li>
+              <li role="listitem">
+                Coordinating with product and design teams to deliver new
+                features
+              </li>
+              <li role="listitem">
+                Development of internal tools for tracking performance and KPIs
+              </li>
+              <li role="listitem">
+                Mentoring junior developers and fostering knowledge sharing
+                practices
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 id="boom-heading">
+              <a
+                href="https://www.boom.co"
+                class="company-heading"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="BOOM (opens in new tab)"
+                >BOOM</a
+              >
+            </h3>
+
+            <a
+              href="https://www.boom.co"
+              class="screen-reader-only"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit BOOM website (opens in new tab)"
+              >Visit Company Website</a
+            >
+            <div class="job-title">
+              Senior Frontend Engineer <span class="date">2022 - 1 year</span>
+            </div>
+            <h4 class="location">Remote</h4>
+
+            <p class="job-description">
+              Early-stage startup that aimed at transforming the world of visual
+              content management.
+            </p>
+            <h4 class="visually-hidden">Key Achievements at BOOM</h4>
+            <ul class="job-highlights" role="list">
+              <li role="listitem">
+                Leading frontend development and architecture decisions
+              </li>
+              <li role="listitem">
+                Building and integrating core product features
+              </li>
+              <li role="listitem">
+                Coordinating with product team to define technical roadmap
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 id="frog-heading">
+              <a
+                href="https://www.frog.co"
+                class="company-heading"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="FROG (opens in new tab)"
+                >FROG</a
+              >
+            </h3>
+
+            <a
+              href="https://www.frog.co"
+              class="screen-reader-only"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit FROG website (opens in new tab)"
+              >Visit Company Website</a
+            >
+            <div class="job-title">
+              Design Technologist II
+              <span class="date">2018 - 2022 - 4 years</span>
+            </div>
+            <h4 class="location">Munich / Milan</h4>
+
+            <p class="job-description">
+              Part of a small, high-impact engineering team at a world-leading
+              design consultancy, developing solutions for market leaders across
+              multiple industries.
+            </p>
+            <h4 class="visually-hidden">Key Achievements at FROG</h4>
+            <ul class="job-highlights" role="list">
+              <li role="listitem">
+                Delivering production-ready applications at enterprise scale
+              </li>
+              <li role="listitem">
+                Leading development teams across multiple client projects
+              </li>
+              <li role="listitem">
+                Building rapid prototyping tools to validate concepts with
+                clients
+              </li>
+              <li role="listitem">
+                Mentoring junior developers and fostering knowledge sharing
+                practices
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <h3 id="arduino-heading">
+              <a
+                href="https://www.arduino.cc"
+                class="company-heading"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ARDUINO (opens in new tab)"
+                >ARDUINO</a
+              >
+            </h3>
+
+            <a
+              href="https://www.arduino.cc"
+              class="screen-reader-only"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ARDUINO website (opens in new tab)"
+              >Visit Company Website</a
+            >
+            <div class="job-title">
+              Design Technologist
+              <span class="date">2015 - 2018 - 3 years</span>
+            </div>
+            <h4 class="location">Turin / Malmö</h4>
+
+            <p class="job-description">
+              Core developer at an open source electronics platform, focused on
+              IoT applications and developer education.
+            </p>
+            <h4 class="visually-hidden">Key Achievements at ARDUINO</h4>
+            <ul class="job-highlights" role="list">
+              <li role="listitem">
+                Building web interfaces and applications for IoT devices
+              </li>
+              <li role="listitem">
+                Creating libraries and tutorials used by thousands
+              </li>
+              <li role="listitem">
+                Running workshops at universities and companies across Europe
+              </li>
+              <li role="listitem">
+                Contributing to the Arduino ecosystem through beta testing and
+                community support
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <aside class="sidebar" role="complementary">
+      <h2 id="sidebar-heading" class="visually-hidden">
+        Additional Information
+      </h2>
+
+      <section class="profile-section">
+        <h3 class="visually-hidden">Profile Photo</h3>
+        <img
+          src="headshot.jpg"
+          alt="Professional headshot of Tommaso Laterza"
+          class="profile-img"
+          role="img"
+          aria-label="Professional headshot of Tommaso Laterza"
+        />
+      </section>
+
+      <section class="sidebar-section">
+        <h3 id="contact-heading">Contact Information</h3>
+        <nav class="contact-links" aria-labelledby="contact-heading">
+          <ul role="list">
+            <li role="listitem">
+              <a
+                href="mailto:tommasoltrz@gmail.com"
+                aria-label="Send email to tommasoltrz@gmail.com"
+                >tommasoltrz@gmail.com</a
+              >
+            </li>
+            <li role="listitem">
+              <a
+                href="https://linkedin.com/in/tommaso-laterza"
+                aria-label="Visit LinkedIn profile (opens in new tab)"
+                target="_blank"
+                rel="noopener noreferrer"
+                >linkedin.com/in/tommaso-laterza</a
+              >
+            </li>
+            <li role="listitem">
+              <a
+                href="https://tommasolaterza.io"
+                aria-label="Visit personal website (opens in new tab)"
+                target="_blank"
+                rel="noopener noreferrer"
+                >tommasolaterza.io</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="sidebar-section">
+        <h3 id="skills-heading">Technical Skills</h3>
+
+        <h4 class="skills-subheading">Web Development</h4>
+        <ul class="skills-list" role="list" aria-labelledby="skills-heading">
+          <li role="listitem">Frontend (React, TypeScript, JavaScript)</li>
+          <li role="listitem">Backend (Node.js)</li>
+          <li role="listitem">Design Systems</li>
+          <li role="listitem">Performance Monitoring & Analytics</li>
+        </ul>
+
+        <h4 class="skills-subheading">Infrastructure</h4>
+        <ul class="skills-list" role="list" aria-labelledby="skills-heading">
+          <li role="listitem">Databases (SQL, MongoDB)</li>
+          <li role="listitem">Docker & Containerization</li>
+          <li role="listitem">Git & CI/CD</li>
+          <li role="listitem">REST & GraphQL APIs</li>
+        </ul>
+
+        <h4 class="skills-subheading">Tools & Processes</h4>
+        <ul class="skills-list" role="list" aria-labelledby="skills-heading">
+          <li role="listitem">Project Management (Jira)</li>
+          <li role="listitem">Code Review & Mentoring</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h3 id="languages-heading">Language Proficiency</h3>
+        <ul
+          class="languages-list"
+          role="list"
+          aria-labelledby="languages-heading"
+        >
+          <li role="listitem">English: fluent</li>
+          <li role="listitem">Italian: native</li>
+          <li role="listitem">French: B2</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h3 id="education-heading">Education</h3>
+        <ul
+          class="education-list"
+          role="list"
+          aria-labelledby="education-heading"
+        >
+          <li role="listitem">MSc in Interaction Design, Malmö</li>
+          <li role="listitem">BSc in Computer Science engineering, Turin</li>
+        </ul>
+      </section>
+    </aside>
+    <div class="accent-top-bar" role="presentation" aria-hidden="true"></div>
+  </body>
+</html>
